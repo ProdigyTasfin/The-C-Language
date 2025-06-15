@@ -25,3 +25,15 @@ int main(){
 // ✅ Good for reading one letter, one char at a time.
 
 // ❌ Not for reading full words or sentences. 
+
+
+// Why NOT getc() for strings
+// If you use getc() for a string, you must write extra code:
+
+// Keep calling getc() in a loop.
+
+// Store each char in an array.
+
+// Check for Enter key (\n).
+
+// Manually add \0 at the end. 
