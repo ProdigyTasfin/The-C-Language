@@ -2,9 +2,9 @@
 #include <string.h>
 
 int main(){
-     char c = ('m', 'e');
+     char c = ('u');
      int count = 0;
-     char str[]="you";
+     char str[]="me";
      for (int i = 0; i < strlen(str); i++){
         if (str[i]== c){
             count++;
