@@ -5,11 +5,10 @@
 
 /* My own version of strlen */
 int my_strlen(const char *str) {
-    int length = 0;
+    int length;
 
-    // Loop through each character until the null terminator '\0'
-    while (str[length] != '\0') {
-        length++;
+    for (length = 0; str[length] != '\0'; length++) {
+        // nothing to do inside, just counting
     }
 
     return length;
