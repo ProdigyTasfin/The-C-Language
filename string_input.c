@@ -1,17 +1,4 @@
 #include <stdio.h>
-
-/* Q: Write a program to take string as an input from the user using %c and %s  confirm that the strings are equal
-
-A:   */
-
-
-#include <stdio.h>
-#include <string.h>
-
-/* Q: Write a program to take string as an input from the user using %c and %s.
-      Confirm that the strings are equal */
-
-#include <stdio.h>
 #include <string.h>
 
 /* Q: Write a program to take string as input from user using %c and %s 
