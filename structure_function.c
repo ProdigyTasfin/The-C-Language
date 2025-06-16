@@ -20,6 +20,6 @@ int main()
     e1.age = 43; //age
     strcpy(e1.name, "Tas Fin"); //copy name from string 
     e1.salary = 50432.22; //salary in float
-    show(e1); // function excutable
+    show(e1); 
     return 0;
 }
