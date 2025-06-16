@@ -17,7 +17,7 @@ void show(struct employee e){
 int main()
 {
     struct employee e1; //employee
-    e1.age = 43;
+    e1.age = 43; //age
     strcpy(e1.name, "Tas Fin");
     e1.salary = 50432.22;
     show(e1);
