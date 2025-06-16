@@ -18,7 +18,7 @@ int main()
 {
     struct employee e1; //employee
     e1.age = 43; //age
-    strcpy(e1.name, "Tas Fin"); //copy name from string 
+    strcpy(e1.name, "Tas Fin"); 
     e1.salary = 50432.22; 
     show(e1); 
     return 0;
