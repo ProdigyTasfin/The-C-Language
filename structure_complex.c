@@ -24,7 +24,7 @@ int main(){
         printf("This is a real number (complex part is zero).\n");
     }
     if (c1.real == 0) {
-        printf("This is a purely complex number (real part is zero).\n");
+        printf("This is a purely complex numbr (real part is zero).\n");
     }
     return 0;
 }
