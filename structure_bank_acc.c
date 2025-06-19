@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-// Create a structure representing a bank account git
+// Create a structure representing a bank account 
 
 int main(){
      
