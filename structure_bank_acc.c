@@ -22,7 +22,7 @@ int main() {
     scanf("%s", account.accountType);
 
     printf("Enter balance: ");
-    scanf("%f", &account.balance;
+    scanf("%f", &account.balance);
 
     printf("\nAccount Details:\n");
     printf("Name: %s\n", account.name);
