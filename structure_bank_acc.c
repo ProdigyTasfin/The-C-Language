@@ -13,7 +13,7 @@ int main() {
     BankAccount account;
 
     printf("Enter account holder name: ");
-    scanf(" %[^\n]", account.name); // Read full name
+    scanf("%s" account.name); // Read full name
 
     printf("Enter account number: ");
     scanf("%d", &account.accountNumber);
