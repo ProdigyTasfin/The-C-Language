@@ -1,6 +1,6 @@
 #include <stdio.h>
 
 int main(){
-    printf("There are six divisions in Bangladesh \n\nDhaka\nChittagong\nRajshahi\nKhulna\nSylhet\nBangladesh\n\nI live in Dhaka.");
+    printf("My Family Information-\n\tName: Devid\n\tFather: Daud\n\tMother: Stella\n\nEducation Information:\n\tSchool: Saint Joseph School\n\tCollege: Mirpur College\n\tUniversity: East West University");
 return 0;
 }
