@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <math.h>
 
 int main(){
 
@@ -23,9 +24,32 @@ int main(){
     // printf("Enter Your Width: ");
     // scanf("%lf" , &width);
 
-
-
     // printf(" Your Volume is: %lf", height * width * length);
+
+    // double f;
+    // int c ;
+
+    // printf("Enter Your Fahrenheit: ");
+    // scanf("%lf" , &f);
+
+    // c = (5.0/9.0) * (f-32);
+
+
+    // printf("Temperature in Fahrenheit: %0.lf\n", f);
+    // printf("Temperature in Celsius: %d", c);
+
+    // double r, a, p;
+
+    // printf("Enter the radius: ");
+    // scanf("%lf", &r);
+
+    // a = 3.1415926* r* r;
+    // p = 2 * 3.1415926 * r;
+
+    // printf("Area = %lf\n", a);
+    // printf("Perimeter = %lf", p);
+
+    
 
 
     return 0;
