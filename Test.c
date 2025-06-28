@@ -15,17 +15,17 @@ int main(){
     // printf(" Your Volume is: %d", height * width * length);
 
 
-    double length, width, height;
-    printf("Enter Your Height: ");
-    scanf("%lf" , &height);
-    printf("Enter Your Length: ");
-    scanf("%lf" , &length);
-    printf("Enter Your Width: ");
-    scanf("%lf" , &width);
+    // double length, width, height;
+    // printf("Enter Your Height: ");
+    // scanf("%lf" , &height);
+    // printf("Enter Your Length: ");
+    // scanf("%lf" , &length);
+    // printf("Enter Your Width: ");
+    // scanf("%lf" , &width);
 
 
 
-    printf(" Your Volume is: %lf", height * width * length);
+    // printf(" Your Volume is: %lf", height * width * length);
 
 
     return 0;
