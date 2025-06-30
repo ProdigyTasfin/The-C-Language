@@ -49,8 +49,25 @@ int main(){
     // printf("Area = %lf\n", a);
     // printf("Perimeter = %lf", p);
 
-    
+    // double x2, x1, y2, y1;
 
+    // printf("Enter Point X1: ");
+    // scanf("%lf", &x1);
+    // printf("Enter Point X2: ");
+    // scanf("%lf", &x2);
+    // printf("Enter Point Y1: ");
+    // scanf("%lf", &y1);
+    // printf("Enter Point Y2: ");
+    // scanf("%lf", &y2);
+
+    // double X = x2 - x1;
+    // double Y = y2 - y1;
+
+    // double distance = sqrt(pow(X, 2) + pow(Y, 2));
+
+    // printf("The distance is: %lf\n", distance);
+
+    
 
     return 0;
 
