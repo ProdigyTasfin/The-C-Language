@@ -67,21 +67,50 @@ int main()
 
     // printf("a) %d\nb) %.2f\nc) %d\nd) %d\ne) %d\n", sum_a, sum_b, sum_c, sum_d, sum_e);
 
-    int start_year, end_year;
-    printf("\nEnter start year: ");
-    scanf("%d", &start_year);
-    printf("Enter end year: ");
-    scanf("%d", &end_year);
+    // int start_year, end_year;
+    // printf("\nEnter start year: ");
+    // scanf("%d", &start_year);
+    // printf("Enter end year: ");
+    // scanf("%d", &end_year);
 
-    printf("\nLeap years between %d and %d:\n", start_year, end_year);
-    int year = start_year;
-    while (year <= end_year) {
-        if ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)) {
-            printf("%d ", year);
-        }
-        year++;
-    }
-    printf("\n");
+    // printf("\nLeap years between %d and %d:\n", start_year, end_year);
+    // int year = start_year;
+    // while (year <= end_year) {
+    //     if ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)) {
+    //         printf("%d \n", year);
+    //     }
+    //     year++;
+    // }
+    int T;
+    printf("\nEnter number of test cases: ");
+    scanf("%d", &T);
+
+    int t = 1;
+    do {
+        int term1, term2, final, attendance, ct1, ct2, ct3;
+        printf("\nEnter scores for Case %d (T1 T2 Final Att CT1 CT2 CT3):\n", t);
+        scanf("%d %d %d %d %d %d %d", &term1, &term2, &final, &attendance, &ct1, &ct2, &ct3);
+
+        // Average of best two class tests
+        int min_ct = ct1;
+        if (ct2 < min_ct) min_ct = ct2;
+        if (ct3 < min_ct) min_ct = ct3;
+        int ct_sum = ct1 + ct2 + ct3 - min_ct;
+        float ct_avg = ct_sum / 2.0;
+
+        int total = term1 + term2 + final + attendance + (int)ct_avg;
+
+        char grade;
+        if (total >= 90) grade = 'A';
+        else if (total >= 80) grade = 'B';
+        else if (total >= 70) grade = 'C';
+        else if (total >= 60) grade = 'D';
+        else grade = 'F';
+
+        printf("Case %d: %c\n", t, grade);
+        t++;
+    } while (t <= T);
+
 
     return 0;
 }
