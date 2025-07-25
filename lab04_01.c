@@ -2,33 +2,23 @@
 
 int main()
 {
-    int i, n;
-    printf("Enter your nth term: ");
-    scanf("%d", &n);
+    int A[7], total = 0, days =0;
+    float avg = 0;
 
-    int sum_a = 0;
-    i = 1;
-    while (i <= n)
+    printf("7 days of your steps: ");
+    for (int i = 0; i < 7; i++)
     {
-        sum_a += i;
-        i++;
-    }
-    float sum_b = 0;
-    i = 1;
-    do 
-    {   sum_b += 1.0 / i;
-        i++;
+        scanf("%d", &A[i]);
+        total = total + A[i];
+        avg = total / 7.0;
 
-    } while (i <= n);
-    int sum_c = 0;
-    i = 1;
-    while (i < n) {
-        sum_c += i * (i + 1);
-        i += 2;
+        if (A[i] >= 10000) {
+            days++;
+        }
+        
     }
     
-    
-
-    printf("Result: %d %.2f %d", sum_a, sum_b,sum_c);
-    return 0;
+    printf("Your Average Step: %.2f", avg);
+    printf("Your Total Steps: %d", total);
+    printf("Days you walked 10,000 or more steps: %d\n", days);
 }
