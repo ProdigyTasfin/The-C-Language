@@ -2,7 +2,7 @@
 
 int main()
 {
-    float t[7][3],sum=0,sumFinal=0,avg,max;
+    float t[7][3];
     int i,j;
 
     printf("Input data:\n");
