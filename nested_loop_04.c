@@ -8,11 +8,11 @@ int main()
 
     for (i = n; i >= 1; i--) // rows
     {
-        for (j = i; j >= 1; j--) // stars per row
+        for (j = i; j >= 1; j--) 
         {
             printf("*");
         }
-        printf("\n"); // move to next line after printing stars
+        printf("\n");
     }
 
     return 0;
