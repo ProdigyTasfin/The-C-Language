@@ -39,7 +39,7 @@ void WelcomeMessage(){
 }
 
 // Goodbye
-void showGoodByeMessage(){
+void GoodByeMessage(){
     printf("          ===================================================================================\n");
     printf("          Thank you for using Medical Leave System                                           \n");
     printf("          ===================================================================================\n");
@@ -95,124 +95,6 @@ int registerLeave(struct Leave leaves[], int count, int nextID){
         return count;
     }
 
-    if(compareDates(newLeave.s_day,newLeave.s_month,newLeave.s_year,
-                    newLeave.e_day,newLeave.e_month,newLeave.e_year) > 0){
-        printf("Start date after end date. Registration failed.\n");
-        return count;
-    }
-
-    newLeave.status = 0;
-    newLeave.remarks[0] = '\0';
-    leaves[count] = newLeave;
-    printf("Leave request registered successfully. ID: %d\n", newLeave.id);
-    return count+1;
-}
-
-// Display All Requests
-void displayAll(struct Leave leaves[], int count){
-    if(count == 0){
-        printf("No leave requests yet.\n");
-        return;
-    }
-    printf("All Leave Requests:\n");
-    for(int i=0;i<count;i++){
-        char *status;
-        if(leaves[i].status == 0) status="Pending";
-        else if(leaves[i].status == 1) status="Approved";
-        else status="Rejected";
-
-        printf("ID: %d | Name: %s | Dept: %s | %02d/%02d/%04d to %02d/%02d/%04d | Status: %s\n",
-            leaves[i].id, leaves[i].name, leaves[i].dept,
-            leaves[i].s_day, leaves[i].s_month, leaves[i].s_year,
-            leaves[i].e_day, leaves[i].e_month, leaves[i].e_year,
-            status);
-    }
-}
-
-// Search by ID
-void searchByID(struct Leave leaves[], int count){
-    int id, found=0;
-    printf("Enter Request ID: ");
-    scanf("%d",&id);
-    for(int i=0;i<count;i++){
-        if(leaves[i].id == id){
-            char *status;
-            if(leaves[i].status == 0) status="Pending";
-            else if(leaves[i].status == 1) status="Approved";
-            else status="Rejected";
-
-            printf("ID: %d | Name: %s | Dept: %s | %02d/%02d/%04d to %02d/%02d/%04d | Status: %s\n",
-                leaves[i].id, leaves[i].name, leaves[i].dept,
-                leaves[i].s_day, leaves[i].s_month, leaves[i].s_year,
-                leaves[i].e_day, leaves[i].e_month, leaves[i].e_year,
-                status);
-            if(leaves[i].remarks[0]!='\0') printf("Remarks: %s\n",leaves[i].remarks);
-            found=1;
-            break;
-        }
-    }
-    if(!found) printf("Request with ID %d not found.\n",id);
-}
-
-// Approve/Reject
-void approveReject(struct Leave leaves[], int count){
-    int id, found=0;
-    char choice;
-    printf("Enter Request ID to approve/reject: ");
-    scanf("%d",&id);
-    for(int i=0;i<count;i++){
-        if(leaves[i].id == id){
-            printf("Approve (A) / Reject (R) / Cancel (C): ");
-            getchar(); // consume leftover newline
-            scanf("%c",&choice);
-            if(choice=='A' || choice=='a'){
-                leaves[i].status=1;
-                printf("Enter remarks (optional): ");
-                getchar();
-                scanf(" %[^\n]", leaves[i].remarks);
-                printf("Request approved.\n");
-            } else if(choice=='R' || choice=='r'){
-                leaves[i].status=2;
-                printf("Enter remarks (required): ");
-                getchar();
-                scanf(" %[^\n]", leaves[i].remarks);
-                printf("Request rejected.\n");
-            } else printf("Operation cancelled.\n");
-            found=1;
-            break;
-        }
-    }
-    if(!found) printf("Request with ID %d not found.\n",id);
-}
-
-// Update Dates
-void updateDates(struct Leave leaves[], int count){
-    int id, found=0;
-    printf("Enter Request ID to update: ");
-    scanf("%d",&id);
-    for(int i=0;i<count;i++){
-        if(leaves[i].id == id){
-            printf("Enter new start date (day month year): ");
-            scanf("%d %d %d",&leaves[i].s_day,&leaves[i].s_month,&leaves[i].s_year);
-            printf("Enter new end date (day month year): ");
-            scanf("%d %d %d",&leaves[i].e_day,&leaves[i].e_month,&leaves[i].e_year);
-
-            if(!isValidDate(leaves[i].s_day,leaves[i].s_month,leaves[i].s_year) ||
-               !isValidDate(leaves[i].e_day,leaves[i].e_month,leaves[i].e_year)){
-                printf("Invalid dates. Update aborted.\n");
-            } else if(compareDates(leaves[i].s_day,leaves[i].s_month,leaves[i].s_year,
-                                   leaves[i].e_day,leaves[i].e_month,leaves[i].e_year)>0){
-                printf("Start date after end date. Update aborted.\n");
-            } else {
-                printf("Dates updated successfully.\n");
-            }
-            found=1;
-            break;
-        }
-    }
-    if(!found) printf("Request with ID %d not found.\n",id);
-}
-
 // Main
 int main(){
     struct Leave leaves[200];
@@ -233,6 +115,6 @@ int main(){
         else printf("Invalid choice.\n");
     }
 
-    showGoodByeMessage();
+    GoodByeMessage();
     return 0;
 }
