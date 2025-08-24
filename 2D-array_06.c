@@ -3,7 +3,7 @@
 int main()
 {
     float temp[3][4];
-    int i,j, sum;
+    int i,j, sum, max;
     float avg;
 
     for (i = 0; i < 3; i++){
@@ -20,7 +20,12 @@ int main()
             scanf("%f",&temp[i][j]);
             sum += temp[i][j];
             avg = sum / 4.0;
+            max = temp[0][0];
+            if(max < temp[i][j]){
+                max = temp[i][j];
+            }
         }
         printf("\nAverage temperature %.2f\n",avg);
+        printf("\nMaximum temperature %.2f\n",max);
     }
 }
