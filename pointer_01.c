@@ -3,7 +3,7 @@
 int main() {
     double d = 3.14159;
     int i = 42;
-    char str[] = "Hello"; //s
+    char str[] = "Hello"; 
     
 
     printf("Value of double: %lf, Address: %p\n", d, (void*)&d);
