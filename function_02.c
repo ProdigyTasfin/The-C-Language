@@ -1,27 +1,35 @@
 #include <stdio.h>
 
-float finalprice(float discount)
-{   int a,b;
-    printf("Enter your Coupon Code SAVE10(1)/SAVE20(2): ");
-    scanf("%d",&a);
-    if (a == 1){
-        b= discount - discount * 0.01;
-    }
-    else if ( a == 2){
-        b = discount - discount * 0.02;
-    }
-    else b = discount;
+float finalPrice(float amount)
+{
+    int code;
+    float price;
 
-    return b;
+    printf("Enter your Coupon Code SAVE10(1)/SAVE20(2): ");
+    scanf("%d", &code);
+
+    if (code == 1) {
+        price = amount - amount * 0.10;  // 10% discount
+    }
+    else if (code == 2) {
+        price = amount - amount * 0.20;  // 20% discount
+    }
+    else {
+        price = amount;  // No discount
+    }
+
+    return price;
 }
 
-int main(){
-     int amount,discount;
-     printf("Enter Your Amount: ");
-     scanf("%d",&amount);
-     discount = finalprice(amount);
-     printf("Final Price %d",discount);
+int main()
+{
+    float amount, final_amount;
 
+    printf("Enter Your Amount: ");
+    scanf("%f", &amount);
+
+    final_amount = finalPrice(amount);
+    printf("Final Price = %.2f\n", final_amount);
 
     return 0;
 }
