@@ -7,7 +7,21 @@
 
 int main()
 {
-     float gpa;
+    float gpa;
 
+    printf("Enter Your Current GPA (1.00 to 4.00): ");
+    scanf("%f",&gpa);
+
+    if (gpa > 1.00 && gpa > 4.00)
+    {
+        printf("Invalid GPA. ");
+    }
+    else if (gpa > 3.00 && gpa <= 4.00)
+    {
+        printf("Scholarship Active. ");
+    }
+    else printf("Scholarship Suspended. ");
+    
+    
     return 0;
 }
