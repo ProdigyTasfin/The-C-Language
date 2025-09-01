@@ -2,7 +2,7 @@
 #include <string.h>
 
 int main() {
-    char vehicle[10];
+    char vehicle[10]; //Vehicle as a string
     float distance, cost;
 
     printf("Enter Vehicle Type (car/bike): ");
