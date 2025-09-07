@@ -15,7 +15,7 @@ int main()
         }
 
     }
-    printf("The average mark (excluding those less than 40%%) is: %f",avg); //
+    printf("The average mark (excluding those less than 40%%) is: %f",avg); 
      
     return 0;
 }
