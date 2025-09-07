@@ -35,9 +35,9 @@ int main()
         colSum = 0;
         for (i = 0; i < 4; i++)
         {
-            rowSum += a[i][j];
+           colSum += a[i][j];
         }
-        printf("%d. %d of Row Sum\n", i + 1, colSum);
+        printf("%d. %d of Column Sum\n", j + 1, colSum);
 }
 
 }
