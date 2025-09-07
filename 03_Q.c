@@ -33,6 +33,7 @@ int main()
     total = secA+secB;
     toHMS( total, &h, &m, &s);
     printf("%dhr %dm %ds is your time\n",h,m,s);
+    
      
     return 0;
 }
