@@ -8,7 +8,7 @@ int main()
     printf("Enter the marks of %d students: ",n);
     for(i = 0; i<n; i++){
         scanf("%d",&mark);
-        if(mark > 40){
+        if(mark >= 40){
             count++;
             sum +=mark;
             avg = sum / count;
