@@ -28,5 +28,16 @@ int main()
             rowSum += a[i][j];
         }
         printf("%d. %d of Row Sum\n", i + 1, rowSum);
+    
     }
+    for (j = 0; j < 4; j++)
+    {
+        colSum = 0;
+        for (i = 0; i < 4; i++)
+        {
+            rowSum += a[i][j];
+        }
+        printf("%d. %d of Row Sum\n", i + 1, colSum);
+}
+
 }
